@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2 class="title">To-Do List</h2>
+        </div>
+    </div>
+</div>
+
+<hr />
+<div class="container-fluid d-flex justify-content-center mt-5">
+    <ul class="list-group col-3">
+        <li class="list-group-item" *ngFor="let task of taskList; let i = index" (dblclick)="eraseTask(i)">
+            {{ task }}
+        </li>
+    </ul>
+</div>
+<div class="adding">
+    <img src="../../../../assets/images/plus.svg" alt="add new task button" width="30" [swal]="{
+      title: 'Enter your new task.',
+      input: 'text',
+      confirmButtonText: 'Create',
+      icon: 'question',
+      showDenyButton: true,
+      denyButtonText: 'Cancel :('
+    }" (confirm)="saveFile($event)" />
+</div>
