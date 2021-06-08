@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
 html,
 body,
 div,
@@ -87,4 +88,22 @@ video {
 
 body {
     background-color: #cacaca;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+app-sidenav {
+    position: fixed;
+    text-align: center;
+    width: 200px;
+    top: auto;
+    left: 20px;
+    z-index: 99;
 }
