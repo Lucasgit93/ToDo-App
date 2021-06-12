@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
   }
   h1{
     font-size: 40px;
-    padding-top: 6px
+    padding-top: 6px;
   }
   `]
 })

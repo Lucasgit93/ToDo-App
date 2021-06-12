@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+
+
+
+  language: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
+
 
 }

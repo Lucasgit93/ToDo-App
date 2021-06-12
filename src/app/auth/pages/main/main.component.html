@@ -1,0 +1,57 @@
+<div class="row float-end mt-2 me-3">
+    <div class="col">
+        <span class="switch-span">ENG</span>
+        <label class="switch">
+            <input type="checkbox"  (click)="language = !language">
+            <span class="slider round"></span>
+        </label>
+        <span class="switch-span">ESP</span>
+    </div>
+</div>
+
+
+
+<ng-container *ngIf="!language ; else spanish">
+
+
+
+    <div class="row text-center mt-4 content">
+        <div class="col">
+
+            <h2 class="text-center mt-5">About</h2>
+            <div class="text-content">
+                <p class="mt-4 para">
+                    I've build this simple app with Angular, a bit of bootstrap and SweetAlert, to practice and reinforce concepts that i've been learning since I started studying web development in early 2021, this in turn helped me see where to pay more attention and it
+                    served as a mini personal project...
+                </p>
+                <p class="mt-4 para">
+                    In this app you will be able to create a list of tasks, which are saved in the Local Storage. They can be removed by double clicking and it has a hover effect to indicate the user the task that has focus at that moment.
+                </p>
+                <p class="mt-4 para">
+                    Later I plan to integrate it into a database, so that the user can validate and save his/her tasks, so that they are not lost when they close the page.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-template #spanish>
+    <div class="row text-center mt-4 content">
+        <div class="col">
+            <h2 class="text-center mt-5">Acerca</h2>
+            <div class="text-content">
+                <p class="mt-4 para">
+                    Arme esta app simple con Angular, un poco de bootstrap y SweetAlert, para practicar y reforzar conceptos que fuí aprendiendo desde que empecé a estudiar desarrollo web a principios del 2021, esto a su vez me ayudó a ver donde prestar mas atención y sirvió
+                    como mini proyecto personal...
+                </p>
+                <p class="mt-4 para">
+                    En esta app vas a poder crear una lista de tareas, las cuales se guardan en el Local Storage. Las mismas pueden ser eliminadas mediante doble click y tiene un efecto hover para indicarle al usuario la tarea que tiene focus en ese momento.
+                </p>
+                <p class="mt-4 para">
+                    Más adelante planeo integrarlo a una base de datos, para que el usuario pueda validarse y guardar sus tareas, para que estas no se pierdan al cerrar la página. </p>
+
+            </div>
+        </div>
+    </div>
+
+</ng-template>

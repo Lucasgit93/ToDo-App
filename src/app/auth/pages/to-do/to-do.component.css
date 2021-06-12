@@ -5,11 +5,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
-hr {
-    width: 300px;
-    margin: auto;
-    position: relative;
-    top: 30px;
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background img {
+    z-index: -60;
+    background-size: auto;
 }
 
 .adding {
@@ -18,13 +22,13 @@ hr {
     border-radius: 50%;
     bottom: 100px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .05), 2px 2px 5px rgba(0, 0, 0, .1), 4px 4px 10px rgba(0, 0, 0, .3);
-    color: red;
     display: flex;
     height: 50px;
     justify-content: center;
     position: fixed;
     right: 150px;
     width: 50px;
+    z-index: 999;
 }
 
 li {
@@ -32,23 +36,68 @@ li {
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     background-color: #fff;
-    transition: all 1s ease;
+    transition: all .5s ease-in-out;
+    z-index: 3;
+    width: fit-content;
 }
 
 li:hover {
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    background-color: #e05d5dea;
-    transition: all 1s ease;
+    background-color: #54A4F6;
+    transition: all .5s ease-in-out;
 }
 
-img {
+.new-image {
     color: #fff;
     transition: all .2s ease-in-out;
 }
 
-img:hover {
+.new-image:hover {
     color: #fff;
     transform: rotateZ(45deg);
     transition: all .2s ease-in-out;
+}
+
+.menu {
+    border-radius: 2px;
+}
+
+.editBtn {
+    margin-left: 20.5rem;
+}
+
+.btn {
+    width: 45px;
+}
+
+.editingImg {
+    margin-bottom: 2px;
+}
+
+.deleteImg {
+    margin-bottom: 1px;
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        position: relative;
+        top: 150px;
+        left: 30px;
+        width: 200px;
+    }
+    .mat-accordion {
+        position: relative;
+        top: 120px;
+        left: -145px;
+    }
+    li {
+        width: fit-content;
+    }
+    .menu {
+        width: fit-content;
+    }
+    .editBtn {
+        margin-left: 10px;
+    }
 }

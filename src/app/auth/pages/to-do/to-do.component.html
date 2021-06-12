@@ -1,26 +1,55 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <h2 class="title">To-Do List</h2>
+            <h2 class="title mb-5">To-Do List</h2>
         </div>
     </div>
 </div>
-<hr />
 
-<div class="container-fluid d-flex justify-content-center mt-5">
-    <ul class="list-group col-3">
-        <li class="list-group-item mt-1" *ngFor="let task of taskList; let i = index" (dblclick)="eraseTask(i)">
-            {{ task | firstLetter }}
-        </li>
-    </ul>
-</div>
+
+
+
+
+<mat-accordion *ngFor="let task of taskList; let i = index">
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title class="d-flex justify-content-center mt-1">
+                <ul class="list-group col-3">
+                    <li class="list-group-item mt-1 ">
+                        {{ task | firstLetter }}
+                    </li>
+                </ul>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="d-flex justify-content-center me-3">
+            <div class="d-flex justify-content-between list-group-item col-3 menu">
+                <button class="btn btn-danger " (click)="eraseTask(i)"><img src="../../../../assets/images/trash.svg" width="20" class="deleteImg" alt=""></button>
+
+                <button class="editBtn btn btn-info " [swal]="{
+                    title: 'Edit you task.',
+                    input: 'text',
+                    confirmButtonText: 'Edit Task',
+                    icon: 'question',
+                    showDenyButton: true,
+                    denyButtonText: 'Cancel'
+                  }" (confirm)="editFile($event, i)"><img src="../../../../assets/images/edit.svg" width="25" alt="" class="editingImg"></button>
+            </div>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
+
+
+
+
+
+
 <div class="adding">
-    <img src="../../../../assets/images/plus.svg" alt="add new task button" width="30" [swal]="{
+    <img class="new-task" src="../../../../assets/images/plus.svg" alt="add new task button" width="30" [swal]="{
       title: 'Enter your new task.',
       input: 'text',
-      confirmButtonText: 'Create',
+      confirmButtonText: 'Create Task',
       icon: 'question',
       showDenyButton: true,
-      denyButtonText: 'Cancel :('
+      denyButtonText: 'Cancel'
     }" (confirm)="saveFile($event)" />
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 
+
 @Component({
   selector: 'app-to-do',
   templateUrl: './to-do.component.html',
@@ -13,7 +14,6 @@ export class ToDoComponent implements OnInit {
 
 
   taskList: string[] = [];
-  dropMenu: boolean = false;
   
   
   constructor() {}
@@ -28,6 +28,7 @@ export class ToDoComponent implements OnInit {
       }
       
     }
+
 
   }
   
@@ -46,10 +47,6 @@ export class ToDoComponent implements OnInit {
   
 
 
-  menu(){
-  this.dropMenu = true;
-  }
-
   eraseTask(i: number){
 
     this.taskList.splice(i, 1);
@@ -57,6 +54,17 @@ export class ToDoComponent implements OnInit {
     localStorage.setItem("task", JSON.stringify(this.taskList));
   }
 
+public editFile(userInput: string, i:number): void{
+  if (!userInput) {
+    return;
+  } else {
+    this.taskList.splice(i, 1, userInput);
+    localStorage.setItem("task", JSON.stringify(this.taskList))
+    
 
-  
+}
+
+
+
+}
 }
