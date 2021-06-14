@@ -81,18 +81,55 @@ input:checked+.slider:before {
     margin: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px) {
     .content {
         position: relative;
     }
     h2 {
         position: relative;
-        top: 70px;
+        top: 10%;
     }
     .text-content {
         width: 400px;
         position: relative;
-        top: 80px;
-        left: -120px;
+        top: 15%;
+        left: 1%;
+    }
+}
+
+@media (min-width:401px) and (max-width: 767px) {
+    .content {
+        position: relative;
+    }
+    .title-container {
+        position: relative;
+        top: 8%;
+    }
+    .text-content {
+        width: 350px;
+        height: auto;
+        position: relative;
+        top: 10%;
+        right: 95%;
+    }
+    .selector {
+        margin-right: 0.1%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .content {
+        position: relative;
+    }
+    .title-container {
+        position: relative;
+        top: 8%;
+    }
+    .text-content {
+        width: 350px;
+        height: auto;
+        position: relative;
+        top: 10%;
+        right: 240%;
     }
 }

@@ -16,6 +16,12 @@ import { Component, OnInit } from '@angular/core';
     font-size: 40px;
     padding-top: 6px;
   }
+
+  @media only screen and (max-width:400px){
+    .container-fluid{
+      width: 110%;
+    }
+  }
   `]
 })
 export class NavbarComponent implements OnInit {

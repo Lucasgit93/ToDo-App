@@ -38,7 +38,6 @@ li {
     background-color: #fff;
     transition: all .5s ease-in-out;
     z-index: 3;
-    width: fit-content;
 }
 
 li:hover {
@@ -79,25 +78,56 @@ li:hover {
     margin-bottom: 1px;
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 401px) and (max-width: 768px) {
     .title {
         position: relative;
-        top: 150px;
-        left: 30px;
+        top: 150%;
+        left: 38%;
         width: 200px;
     }
     .mat-accordion {
         position: relative;
-        top: 120px;
-        left: -145px;
+        top: 10%;
+        left: 1%;
     }
     li {
         width: fit-content;
     }
     .menu {
         width: fit-content;
+        position: relative;
+        left: 5%;
     }
     .editBtn {
         margin-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        position: relative;
+        top: 160%;
+        left: 32%;
+        width: 200px;
+    }
+    .mat-accordion {
+        position: relative;
+        top: 14%;
+        right: 4%;
+    }
+    li {
+        width: fit-content;
+    }
+    .menu {
+        width: fit-content;
+        position: relative;
+        left: 9%;
+    }
+    .editBtn {
+        margin-left: 10px;
+    }
+    .adding {
+        right: 10%;
+        bottom: 30%;
     }
 }
