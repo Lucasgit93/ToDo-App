@@ -1,8 +1,8 @@
 
-**TO DO APP**
+## TO DO APP
 
-A simple app that let you store task on the local storage.
+__A todo list where you can create, edit and delete tasks and store them in your local storage.__
 
 I've made it with Angular, a bit of Bootstrap and SweetAlert.
 
-https://todo93.netlify.app/
+__[To Do List](https://todo93.netlify.app/)__
